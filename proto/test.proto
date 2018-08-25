@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option optimize_for = SPEED;
+
+package proto;
+
+service Transaction {
+  rpc PostTransaction (Request) returns (Request) {
+  }
+}
+
+
+message Request {
+  string message = 1;
+}
